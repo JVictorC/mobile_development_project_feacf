@@ -1,50 +1,119 @@
-# Welcome to your Expo app 👋
+# 📱 Mobile Development Project - FEACF
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicação móvel desenvolvida com **React Native** e **Expo**, utilizando
+**Expo Router** para roteamento baseado em arquivos (*file‑based
+routing*) e **Context API** para gerenciamento de autenticação.
 
-## Get started
+O objetivo do projeto é demonstrar uma estrutura organizada e escalável
+para aplicações mobile modernas.
 
-1. Install dependencies
+------------------------------------------------------------------------
 
-   ```bash
-   npm install
-   ```
+# 🚀 Tecnologias Utilizadas
 
-2. Start the app
+-   React Native
+-   Expo
+-   Expo Router
+-   Context API
+-   TypeScript
 
-   ```bash
-   npx expo start
-   ```
+------------------------------------------------------------------------
 
-In the output, you'll find options to open the app in a
+# 📂 Estrutura do Projeto
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+A arquitetura segue o padrão **File‑based Routing** do Expo Router.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+    .
+    ├── app/                  # Diretório principal de rotas (Expo Router)
+    │   ├── (auth)/           # Rotas autenticadas (Dashboard, Profile)
+    │   ├── (public)/         # Rotas públicas (Login, Cadastro)
+    │   ├── _layout.tsx       # Layout principal e Provider de autenticação
+    │   └── index.tsx         # Ponto de entrada da aplicação
+    │
+    ├── src/                  # Código fonte centralizado
+    │   ├── components/       # Componentes reutilizáveis
+    │   ├── contexts/         # Contextos da aplicação (AuthContext)
+    │   ├── services/         # Configurações de API (Axios/Firebase)
+    │   └── utils/            # Funções auxiliares
+    │
+    ├── assets/               # Imagens, ícones e fontes
+    ├── app.json              # Configurações do Expo
+    └── package.json          # Dependências e scripts
 
-## Get a fresh project
+------------------------------------------------------------------------
 
-When you're ready, run:
+# ⚙️ Instalação
 
-```bash
-npm run reset-project
+Clone o repositório:
+
+    git clone https://github.com/JVictorC/mobile_development_project_feacf.git
+
+Entre na pasta do projeto:
+
+    cd mobile_development_project_feacf
+
+Instale as dependências:
+
+    npm install
+
+------------------------------------------------------------------------
+
+# ▶️ Executando o Projeto
+
+    npm start
+
+Selecione entre as opcoes listadas a qual voce deseja rodar, ex:
+
+      › Press a │ open Android
+      › Press i │ open iOS simulator
+      › Press w │ open web
+
+  Plataforma              Comando
+  ----------------------- ----------------------------------------
+  Web                     `npm run web`
+  Android (Localhost)     `npx expo start --android --localhost`
+  iOS (Simulador)         `npm run ios`
+  Tunnel (Rede externa)   `npx expo start --tunnel`
+
+------------------------------------------------------------------------
+
+### Limpar cache do Expo
+
+Caso ocorram erros após mudanças estruturais:
+
+    npx expo start -c
+
+------------------------------------------------------------------------
+
+### Erro de atualização remota
+
+Se aparecer a mensagem:
+
+    Failed to download remote update
+
+Verifique a configuração no **app.json**:
+
+``` json
+{
+  "updates": {
+    "checkAutomatically": "NEVER"
+  }
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Isso evita que o Expo tente buscar atualizações remotas durante o
+desenvolvimento local.
 
-## Learn more
+------------------------------------------------------------------------
 
-To learn more about developing your project with Expo, look at the following resources:
+# 📄 Licença
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Este projeto está licenciado sob a **MIT License**.
 
-## Join the community
+Consulte o arquivo `LICENSE` para mais informações.
 
-Join our community of developers creating universal apps.
+------------------------------------------------------------------------
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# 👨‍💻 Autor
+
+Desenvolvido por **JVictorC**
