@@ -1,5 +1,9 @@
 {
   "expo": {
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "NEVER"
+    },
     "name": "meuApp",
     "slug": "meuApp",
     "version": "1.0.0",
